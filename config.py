@@ -1,6 +1,9 @@
-from app import create_app
+import os
+    
+import os
 
-app = create_app()
-
-if __name__ == "__main__":
-    app.run(debug=True)
+class Config:
+    SECRET_KEY = os.environ.get("SECRET_KEY", "DaDy123987")
+    SQLALCHEMY_DATABASE_URI = "sqlite:///suplementos.db"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DEBUG = True
