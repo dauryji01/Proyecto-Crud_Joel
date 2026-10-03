@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Suplementos</title>
+</head>
+<body>
+
+    <h1>Gestión de Suplementos</h1>
+
+    {% for suplemento in suplementos %}
+        <div>
+            <h2>{{ suplemento.nombre }}</h2>
+            <p>Marca: {{ suplemento.marca }}</p>
+            <p>Categoría: {{ suplemento.categoria }}</p>
+            <p>Precio: RD$ {{ suplemento.precio }}</p>
+            <p>Cantidad: {{ suplemento.cantidad }}</p>
+        </div>
+    {% else %}
+        <p>No hay suplementos registrados.</p>
+    {% endfor %}
+
+</body>
+</html>
