@@ -1,3 +1,0 @@
-*Daury*
-sdsad
-**sdas
