@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar suplemento</title>
+</head>
+
+<body>
+
+    <h1>Editar suplemento</h1>
+
+    <form method="POST">
+
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.nombre.label }}
+            {{ form.nombre() }}
+        </p>
+
+        <p>
+            {{ form.marca.label }}
+            {{ form.marca() }}
+        </p>
+
+        <p>
+            {{ form.categoria.label }}
+            {{ form.categoria() }}
+        </p>
+
+        <p>
+            {{ form.precio.label }}
+            {{ form.precio() }}
+        </p>
+
+        <p>
+            {{ form.cantidad.label }}
+            {{ form.cantidad() }}
+        </p>
+
+        <p>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+
+    <a href="/">Volver</a>
+
+</body>
+</html>
