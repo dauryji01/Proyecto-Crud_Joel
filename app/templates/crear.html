@@ -31,12 +31,20 @@
 
         <p>
             {{ form.precio.label }}
-            {{ form.precio() }}
+            {{ form.precio(min="") }}
+
+            {% for error in form.precio.errors %}
+                    <span>{{ error }}</span>
+            {% endfor %}
         </p>
 
         <p>
             {{ form.cantidad.label }}
-            {{ form.cantidad() }}
+            {{ form.cantidad(min="") }}
+            
+            {% for error in form.cantidad.errors %}
+                    <span>{{ error }}</span>
+            {% endfor %}
         </p>
 
         <p>

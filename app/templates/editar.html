@@ -32,11 +32,17 @@
         <p>
             {{ form.precio.label }}
             {{ form.precio() }}
+            {% for error in form.precio.errors %}
+                    <span>{{ error }}</span>
+            {% endfor %}
         </p>
 
         <p>
             {{ form.cantidad.label }}
             {{ form.cantidad() }}
+            {% for error in form.cantidad.errors %}
+                    <span>{{ error }}</span>
+            {% endfor %}
         </p>
 
         <p>

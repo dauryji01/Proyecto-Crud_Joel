@@ -26,26 +26,44 @@
                     <th>Categoría</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
 
             <tbody>
+
                 {% for suplemento in suplementos %}
+
                 <tr>
                     <td>{{ suplemento.nombre }}</td>
                     <td>{{ suplemento.marca }}</td>
                     <td>{{ suplemento.categoria }}</td>
                     <td>RD$ {{ suplemento.precio }}</td>
                     <td>{{ suplemento.cantidad }}</td>
+
+                    <td>
+                        <a href="/editar/{{ suplemento.id }}" class="btn btn-warning">
+                            Actualizar
+                        </a>
+
+                        <form action="/eliminar/{{ suplemento.id }}" method="POST" style="display: inline;">
+                            <button type="submit" class="btn btn-danger">
+                                Eliminar
+                            </button>
+                        </form>
+                    </td>
                 </tr>
 
                 {% else %}
+
                 <tr>
-                    <td colspan="5" class="text-center">
+                    <td colspan="6" class="text-center">
                         No hay suplementos registrados.
                     </td>
                 </tr>
+
                 {% endfor %}
+
             </tbody>
 
         </table>

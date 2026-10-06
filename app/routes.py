@@ -56,3 +56,12 @@ def configurar_rutas(app):
             form=form,
             suplemento=suplemento
         )
+
+    @app.route("/eliminar/<int:id>", methods=["POST"])
+    def eliminar(id):
+        suplemento = Suplemento.query.get_or_404(id)
+
+        db.session.delete(suplemento)
+        db.session.commit()
+
+        return "Suplemento eliminado correctamente"        
