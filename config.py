@@ -1,4 +1,4 @@
-import os
+import os #base de datos
     
 import os
 
