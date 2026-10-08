@@ -1,0 +1,19 @@
+body {
+    background-color: #f5f6f8;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.btn {
+    border-radius: 6px;
+}
