@@ -4,6 +4,8 @@ from wtforms.validators import DataRequired
 from wtforms.validators import DataRequired, number_range
 
 
+#definir reglas para los datos
+
 class SuplementoForm(FlaskForm):
     nombre = StringField("Nombre", validators=[DataRequired()])
     marca = StringField("Marca", validators=[DataRequired()])

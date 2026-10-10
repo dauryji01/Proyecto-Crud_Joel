@@ -1,5 +1,5 @@
 from app import db
-
+# migracion python manage.py makemigrations
 
 class Suplemento(db.Model):
     id = db.Column(db.Integer, primary_key=True)

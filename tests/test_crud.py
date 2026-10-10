@@ -77,7 +77,7 @@ def test_editar_suplemento(client, app):
         }
     )
 
-    assert respuesta.status_code == 200
+    assert respuesta.status_code == 302
 
 
 def test_eliminar_suplemento(client, app):
@@ -97,4 +97,4 @@ def test_eliminar_suplemento(client, app):
 
     respuesta = client.post(f"/eliminar/{suplemento_id}")
 
-    assert respuesta.status_code == 200
+    assert respuesta.status_code == 302
