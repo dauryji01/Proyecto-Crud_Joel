@@ -1,8 +1,7 @@
-from flask import render_template
+from flask import render_template, redirect, url_for, flash
 from app import db
 from app.models import Suplemento
 from app.forms import SuplementoForm
-
 
 def configurar_rutas(app):
 
@@ -30,8 +29,9 @@ def configurar_rutas(app):
 
             db.session.add(suplemento)
             db.session.commit()
-
-            return "Suplemento creado correctamente"
+            
+            flash("¡Suplemento actualizado correctamente!", "success")
+            return redirect(url_for("inicio"))
 
         return render_template("crear.html", form=form)
 
@@ -49,7 +49,8 @@ def configurar_rutas(app):
 
             db.session.commit()
 
-            return "Suplemento actualizado correctamente"
+            flash("¡Suplemento agregado correctamente!", "success")
+            return redirect(url_for("inicio"))
 
         return render_template(
             "editar.html",
@@ -64,4 +65,5 @@ def configurar_rutas(app):
         db.session.delete(suplemento)
         db.session.commit()
 
-        return "Suplemento eliminado correctamente"        
+        flash("¡Suplemento eliminado correctamente!", "success")
+        return redirect(url_for("inicio"))
