@@ -1,5 +1,5 @@
 import pytest
-
+#ejecutar pruebas python -m pytest -v
 from app import create_app, db
 from app.models import Suplemento
 

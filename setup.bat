@@ -51,4 +51,21 @@ echo ========================================
 echo Proyecto preparado correctamente.
 echo Para iniciarlo, ejecuta iniciar.bat
 echo ========================================
+echo .
+echo ========================================
+echo abriendo el proyecto 1/3
+echo ========================================
+
+echo .
+
+echo ========================================
+echo abriendo el python 2/3
+echo ========================================
+start run.bat
+
+echo ========================================
+echo abriendo el la app 3/3
+echo ========================================
+start http://127.0.0.1:5000
 pause
+
